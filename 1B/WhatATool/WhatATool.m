@@ -1,9 +1,5 @@
 #import <Foundation/Foundation.h>
 
-void LogHeader(NSString* text) {
-    NSLog(@"=========%@===========", text);
-}
-
 void PrintPathInfo() {
     NSString* home = [@"~" stringByExpandingTildeInPath];
     NSLog(@"My home folder is at '%@'", home);
@@ -31,6 +27,10 @@ void PrintBookmarkInfo() {
              NSLog(@"Key: %@, URL: %@", key, [bookmarks objectForKey:key]);
         }
     }
+}
+
+void LogHeader(NSString* text) {
+    NSLog(@"=========%@===========", text);
 }
 
 NSString* BoolString(BOOL value) {
