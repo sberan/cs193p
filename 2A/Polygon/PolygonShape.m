@@ -1,18 +1,51 @@
 #import "PolygonShape.h"
 
-
 @implementation PolygonShape
 
 @synthesize numberOfSides;
 @synthesize minimumNumberOfSides;
 @synthesize maximumNumberOfSides;
 
-- (NSString*) name {
-    return @"Square";
+- (id) init {
+    return [self initWithNumberOfSides:4];
 }
 
-BOOL CheckRange(NSString* label, int val, int min, int max) {
-    return NO;
+- (id) initWithNumberOfSides:(int)sides {
+    return [self initWithNumberOfSides: sides minimumNumberOfSides: 3 maximumNumberOfSides: 12];
+}
+
+- (id) initWithNumberOfSides:(int)sides minimumNumberOfSides:(int)min maximumNumberOfSides:(int)max {
+    [self setMinimumNumberOfSides:min];
+    [self setMaximumNumberOfSides:max];
+    [self setNumberOfSides:sides];
+    return self;
+}
+
+- (NSString*) name {
+    switch (numberOfSides) {
+        case 3:
+            return @"Triangle";
+        case 4:
+            return @"Square";
+        case 5:
+            return @"Pentagon";
+        case 6:
+            return @"Hexagon";
+        case 7:
+            return @"Heptagon";
+        case 8:
+            return @"Octagon";
+        case 9:
+            return @"Enneagon";
+        case 10:
+            return @"Decagon";
+        case 11:
+            return @"Hendecagon";
+        case 12:
+            return @"Dodecagon";
+        default:
+            return nil;
+    }
 }
 
 - (void) setNumberOfSides:(int) newNumberOfSides {
@@ -32,25 +65,27 @@ BOOL CheckRange(NSString* label, int val, int min, int max) {
 - (void) setMinimumNumberOfSides:(int) newMinimumNumberOfSides {
     if (newMinimumNumberOfSides < 3) {
         NSLog(@"Invalid minimum number of sides: %i is less than the minimum of %i allowed",
-              newMinimumNumberOfSides,
-              3);
+              newMinimumNumberOfSides, 3);
     } else {
         minimumNumberOfSides = newMinimumNumberOfSides;
     }
 }
 
 - (void) setMaximumNumberOfSides:(int) newMaximumNumberOfSides {
-    if(LogIfIsBetween(newMaximumNumberOfSides, 2, 12) {
+    if (newMaximumNumberOfSides > 12) {
+        NSLog(@"Invalid maximum number of sides: %i is greater than the maximum of %i allowed",
+              newMaximumNumberOfSides, 12);
+    } else {
         maximumNumberOfSides = newMaximumNumberOfSides;
     }
 }
 
 - (float) angleInDegrees {
-    return 360.0;
+    return (180 * ([self numberOfSides] - 2) / [self numberOfSides]);
 }
 
 - (float) angleInRadians {
-    return 25.0;
+    return [self angleInDegrees] * M_PI / 180;
 }
 
 - (NSString*) description {
@@ -60,5 +95,10 @@ BOOL CheckRange(NSString* label, int val, int min, int max) {
             [self name],
             [self angleInDegrees],
             [self angleInRadians]];
+}
+
+- (void) dealloc {
+    NSLog(@"deallocating polygon %@", [self name]);
+    [super dealloc];
 }
 @end
