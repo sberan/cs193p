@@ -11,7 +11,20 @@
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* Polygon.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* Polygon.1 */; };
 		B0ECA153118C8B3400B5C1A6 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ECA152118C8B3400B5C1A6 /* PolygonShape.m */; };
+		E49DD257118F5D8200280A9B /* Polygon in Resources */ = {isa = PBXBuildFile; fileRef = 8DD76FA10486AA7600D96B5E /* Polygon */; };
+		E49DD25C118F5DC100280A9B /* PolygonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E49DD25B118F5DC100280A9B /* PolygonTest.m */; };
+		E49DD276118F5ECF00280A9B /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ECA152118C8B3400B5C1A6 /* PolygonShape.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E49DD247118F5D0E00280A9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F960486AA7600D96B5E /* Polygon */;
+			remoteInfo = Polygon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
@@ -34,6 +47,10 @@
 		B0ECA151118C8B3400B5C1A6 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
 		B0ECA152118C8B3400B5C1A6 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
 		C6859EA3029092ED04C91782 /* Polygon.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Polygon.1; sourceTree = "<group>"; };
+		E49DD241118F5D0000280A9B /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49DD242118F5D0000280A9B /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
+		E49DD25A118F5DC100280A9B /* PolygonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonTest.h; sourceTree = "<group>"; };
+		E49DD25B118F5DC100280A9B /* PolygonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,16 +62,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E49DD23E118F5D0000280A9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* Polygon */ = {
 			isa = PBXGroup;
 			children = (
+				E49DD259118F5D9300280A9B /* Test Cases */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859EA2029092E104C91782 /* Documentation */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
+				E49DD242118F5D0000280A9B /* Test-Info.plist */,
 			);
 			name = Polygon;
 			sourceTree = "<group>";
@@ -82,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD76FA10486AA7600D96B5E /* Polygon */,
+				E49DD241118F5D0000280A9B /* Test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +119,15 @@
 				C6859EA3029092ED04C91782 /* Polygon.1 */,
 			);
 			name = Documentation;
+			sourceTree = "<group>";
+		};
+		E49DD259118F5D9300280A9B /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+				E49DD25A118F5DC100280A9B /* PolygonTest.h */,
+				E49DD25B118F5DC100280A9B /* PolygonTest.m */,
+			);
+			name = "Test Cases";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +151,25 @@
 			productReference = 8DD76FA10486AA7600D96B5E /* Polygon */;
 			productType = "com.apple.product-type.tool";
 		};
+		E49DD240118F5D0000280A9B /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49DD246118F5D0100280A9B /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				E49DD23C118F5D0000280A9B /* Resources */,
+				E49DD23D118F5D0000280A9B /* Sources */,
+				E49DD23E118F5D0000280A9B /* Frameworks */,
+				E49DD23F118F5D0000280A9B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49DD248118F5D0E00280A9B /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = Test;
+			productReference = E49DD241118F5D0000280A9B /* Test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,9 +183,37 @@
 			projectRoot = "";
 			targets = (
 				8DD76F960486AA7600D96B5E /* Polygon */,
+				E49DD240118F5D0000280A9B /* Test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E49DD23C118F5D0000280A9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49DD257118F5D8200280A9B /* Polygon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E49DD23F118F5D0000280A9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DD76F990486AA7600D96B5E /* Sources */ = {
@@ -142,7 +225,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E49DD23D118F5D0000280A9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49DD25C118F5DC100280A9B /* PolygonTest.m in Sources */,
+				E49DD276118F5ECF00280A9B /* PolygonShape.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E49DD248118F5D0E00280A9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD76F960486AA7600D96B5E /* Polygon */;
+			targetProxy = E49DD247118F5D0E00280A9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB927508733DD40010E9CD /* Debug */ = {
@@ -200,6 +300,60 @@
 			};
 			name = Release;
 		};
+		E49DD244118F5D0100280A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Test-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Test;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E49DD245118F5D0100280A9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Test-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Test;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -217,6 +371,15 @@
 			buildConfigurations = (
 				1DEB927908733DD40010E9CD /* Debug */,
 				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49DD246118F5D0100280A9B /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49DD244118F5D0100280A9B /* Debug */,
+				E49DD245118F5D0100280A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
