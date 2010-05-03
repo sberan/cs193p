@@ -18,7 +18,9 @@ void PrintPolygonInfo() {
     [polygons addObject:polygon2];
     
     PolygonShape* polygon3 = [[PolygonShape alloc]
-                              initWithNumberOfSides:12 minimumNumberOfSides:9 maximumNumberOfSides:12];
+                              initWithNumberOfSides:12 
+                              minimumNumberOfSides:9 
+                              maximumNumberOfSides:12];
     NSLog(@"Adding polygon: %@", polygon3);
     [polygons addObject:polygon3];
     
