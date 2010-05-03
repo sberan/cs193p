@@ -275,9 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>4</integer>
-									<integer>0</integer>
+									<integer>16</integer>
+									<integer>15</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -309,14 +308,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>E49DD239118F5CD900280A9B</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>PolygonTest.m</string>
+								<string>PolygonShape.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,21 +321,21 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>E49DD23A118F5CD900280A9B</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>PolygonTest.m</string>
+										<string>PolygonShape.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E49DD2E4118F68ED00280A9B</string>
+										<string>E49DD2F3118F6AB400280A9B</string>
 										<key>history</key>
 										<array>
-											<string>E49DD2DA118F68ED00280A9B</string>
 											<string>E49DD2DB118F68ED00280A9B</string>
-											<string>E49DD2DC118F68ED00280A9B</string>
 											<string>E49DD2DD118F68ED00280A9B</string>
 											<string>E49DD2DF118F68ED00280A9B</string>
 											<string>E49DD2E1118F68ED00280A9B</string>
 											<string>E49DD2E2118F68ED00280A9B</string>
-											<string>E49DD2E3118F68ED00280A9B</string>
+											<string>E49DD2F1118F6AB400280A9B</string>
+											<string>E49DD2F2118F6AB400280A9B</string>
+											<string>E49DD2DA118F68ED00280A9B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -377,7 +374,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {818, 127}}</string>
+										<string>{{10, 27}, {818, 188}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
