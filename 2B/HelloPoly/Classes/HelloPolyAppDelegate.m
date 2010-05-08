@@ -4,10 +4,7 @@
 
 @synthesize window;
 
-
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-
-    // Override point for customization after application launch
     [window makeKeyAndVisible];
 }
 
@@ -16,6 +13,5 @@
     [window release];
     [super dealloc];
 }
-
 
 @end

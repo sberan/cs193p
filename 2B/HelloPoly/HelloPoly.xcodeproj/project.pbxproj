@@ -19,6 +19,7 @@
 		B0C1EF12118FC1720012E0A0 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1EEB1118FBDF40012E0A0 /* PolygonShape.m */; };
 		B0C1EF13118FC1740012E0A0 /* HelloPolyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HelloPolyAppDelegate.m */; };
 		B0C1EF23118FC2820012E0A0 /* HelloPolyAppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1EF22118FC2820012E0A0 /* HelloPolyAppDelegateTest.m */; };
+		B0C1EF51119238C70012E0A0 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1EF50119238C70012E0A0 /* Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +27,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1D6058900D05DD3D006BFB54 /* HelloPoly */;
+			remoteGlobalIDString = 1D6058900D05DD3D006BFB54;
 			remoteInfo = HelloPoly;
 		};
 /* End PBXContainerItemProxy section */
@@ -42,12 +43,14 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* HelloPoly_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloPoly_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* HelloPoly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloPoly-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		B0C1EE64118FB7070012E0A0 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.octest; path = "build/Debug-iphonesimulator/Tests.octest"; sourceTree = "<group>"; };
+		B0C1EE64118FB7070012E0A0 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C1EE65118FB7070012E0A0 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		B0C1EEB0118FBDF40012E0A0 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolygonShape.h; path = ../../2A/Polygon/PolygonShape.h; sourceTree = SOURCE_ROOT; };
 		B0C1EEB1118FBDF40012E0A0 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PolygonShape.m; path = ../../2A/Polygon/PolygonShape.m; sourceTree = SOURCE_ROOT; };
 		B0C1EF0C118FC10D0012E0A0 /* PolygonShapeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShapeTest.m; sourceTree = "<group>"; };
 		B0C1EF22118FC2820012E0A0 /* HelloPolyAppDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloPolyAppDelegateTest.m; sourceTree = "<group>"; };
+		B0C1EF4F119238C70012E0A0 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../Controller.h; sourceTree = "<group>"; };
+		B0C1EF50119238C70012E0A0 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = ../Controller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B0C1EF4F119238C70012E0A0 /* Controller.h */,
+				B0C1EF50119238C70012E0A0 /* Controller.m */,
 				B0C1EEB0118FBDF40012E0A0 /* PolygonShape.h */,
 				B0C1EEB1118FBDF40012E0A0 /* PolygonShape.m */,
 				1D3623240D0F684500981E51 /* HelloPolyAppDelegate.h */,
@@ -242,6 +247,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* HelloPolyAppDelegate.m in Sources */,
 				B0C1EEB3118FBDF40012E0A0 /* PolygonShape.m in Sources */,
+				B0C1EF51119238C70012E0A0 /* Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
