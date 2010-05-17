@@ -3,27 +3,31 @@
 
 @implementation Controller
 
-- (void) updateView {
-    [polygon setMinimumNumberOfSides:round([sideSelection minimumValue])];
-    [polygon setMaximumNumberOfSides:round([sideSelection maximumValue])];
-    [polygon setNumberOfSides:round([sideSelection value])];
-    [name setText:[polygon name]];
-    [numSides setText:[NSString stringWithFormat:@"%i", [polygon numberOfSides]]];
-    [polygonView setNeedsDisplay];
-    [defaults setFloat:[polygon numberOfSides] forKey:@"numberOfSides"];
-}
-
 - (void) awakeFromNib {
     float numberOfSides = [[NSUserDefaults standardUserDefaults] floatForKey:@"numberOfSides"];
     if (numberOfSides) {
-        [sideSelection setValue:numberOfSides];
+        sideSelection.value = numberOfSides;
     }
-    [self updateView];
+    [polygon addObserver:self forKeyPath:@"numberOfSides" options:0 context:nil];
+    polygon.minimumNumberOfSides = round(sideSelection.minimumValue);
+    polygon.maximumNumberOfSides = round(sideSelection.maximumValue);
+    polygon.numberOfSides = round(sideSelection.value);
+}
+
+- (void) updateView {
+    name.text = polygon.name;
+    numSides.text = [NSString stringWithFormat:@"%i", [polygon numberOfSides]];
+    [polygonView setNeedsDisplay];
 }
 
 - (IBAction)updateNumberOfSides:(id)sender {
-    if ([polygon numberOfSides] != round([sideSelection value])) {
-        [self updateView];
+    if(round(sideSelection.value) != polygon.numberOfSides) {
+        polygon.numberOfSides = round(sideSelection.value);
     }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    [[NSUserDefaults standardUserDefaults] setFloat:[polygon numberOfSides] forKey:@"numberOfSides"];
+    [self updateView];
 }
 @end

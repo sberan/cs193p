@@ -8,7 +8,6 @@
     IBOutlet UILabel *name;
     IBOutlet UILabel *numSides;
     IBOutlet UIView *polygonView;
-    NSUserDefaults *defaults;
 }
 - (IBAction)updateNumberOfSides:(id)sender;
 @end
