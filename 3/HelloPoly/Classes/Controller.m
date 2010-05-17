@@ -14,12 +14,6 @@
     polygon.numberOfSides = round(sideSelection.value);
 }
 
-- (void) updateView {
-    name.text = polygon.name;
-    numSides.text = [NSString stringWithFormat:@"%i", [polygon numberOfSides]];
-    [polygonView setNeedsDisplay];
-}
-
 - (IBAction)updateNumberOfSides:(id)sender {
     if(round(sideSelection.value) != polygon.numberOfSides) {
         polygon.numberOfSides = round(sideSelection.value);
@@ -28,6 +22,8 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     [[NSUserDefaults standardUserDefaults] setFloat:[polygon numberOfSides] forKey:@"numberOfSides"];
-    [self updateView];
+    name.text = polygon.name;
+    numSides.text = [NSString stringWithFormat:@"%i", [polygon numberOfSides]];
+    [polygonView setNeedsDisplay];
 }
 @end
