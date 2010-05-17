@@ -43,8 +43,6 @@
             return @"Hendecagon";
         case 12:
             return @"Dodecagon";
-        case 13:
-            return @"Dodecagon";
         default:
             return @"Unknown";
     }
