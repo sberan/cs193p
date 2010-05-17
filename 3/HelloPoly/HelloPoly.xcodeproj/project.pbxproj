@@ -14,8 +14,8 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		B0539B461196567600E4D21E /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0539B451196567600E4D21E /* PolygonView.m */; };
-		B0C1EF51119238C70012E0A0 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1EF50119238C70012E0A0 /* Controller.m */; };
 		B0E6886E11A0E2D200D4EC31 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E6886D11A0E2D200D4EC31 /* PolygonShape.m */; };
+		B0E6889011A0E48600D4EC31 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E6888F11A0E48600D4EC31 /* Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +31,10 @@
 		8D1107310486CEB800E47090 /* HelloPoly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloPoly-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B0539B441196567600E4D21E /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
 		B0539B451196567600E4D21E /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
-		B0C1EF4F119238C70012E0A0 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = ../Controller.h; sourceTree = "<group>"; };
-		B0C1EF50119238C70012E0A0 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = ../Controller.m; sourceTree = "<group>"; };
 		B0E6886C11A0E2D200D4EC31 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
 		B0E6886D11A0E2D200D4EC31 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
+		B0E6888E11A0E48600D4EC31 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		B0E6888F11A0E48600D4EC31 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +54,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B0E6888E11A0E48600D4EC31 /* Controller.h */,
+				B0E6888F11A0E48600D4EC31 /* Controller.m */,
 				B0E6886C11A0E2D200D4EC31 /* PolygonShape.h */,
 				B0E6886D11A0E2D200D4EC31 /* PolygonShape.m */,
-				B0C1EF4F119238C70012E0A0 /* Controller.h */,
-				B0C1EF50119238C70012E0A0 /* Controller.m */,
 				1D3623240D0F684500981E51 /* HelloPolyAppDelegate.h */,
 				1D3623250D0F684500981E51 /* HelloPolyAppDelegate.m */,
 				B0539B441196567600E4D21E /* PolygonView.h */,
@@ -169,9 +169,9 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* HelloPolyAppDelegate.m in Sources */,
-				B0C1EF51119238C70012E0A0 /* Controller.m in Sources */,
 				B0539B461196567600E4D21E /* PolygonView.m in Sources */,
 				B0E6886E11A0E2D200D4EC31 /* PolygonShape.m in Sources */,
+				B0E6889011A0E48600D4EC31 /* Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

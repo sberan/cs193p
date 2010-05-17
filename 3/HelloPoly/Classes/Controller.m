@@ -14,8 +14,7 @@
 }
 
 - (void) awakeFromNib {
-    defaults = [NSUserDefaults standardUserDefaults];
-    float numberOfSides = [defaults floatForKey:@"numberOfSides"] ;
+    float numberOfSides = [[NSUserDefaults standardUserDefaults] floatForKey:@"numberOfSides"];
     if (numberOfSides) {
         [sideSelection setValue:numberOfSides];
     }

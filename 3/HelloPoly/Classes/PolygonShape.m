@@ -15,9 +15,11 @@
 }
 
 - (id) initWithNumberOfSides:(int)sides minimumNumberOfSides:(int)min maximumNumberOfSides:(int)max {
-    [self setMinimumNumberOfSides:min];
-    [self setMaximumNumberOfSides:max];
-    [self setNumberOfSides:sides];
+    if(self = [super init]) {
+        [self setMinimumNumberOfSides:min];
+        [self setMaximumNumberOfSides:max];
+        [self setNumberOfSides:sides];
+    }
     return self;
 }
 
