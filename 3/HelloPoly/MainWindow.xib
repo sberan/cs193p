@@ -282,9 +282,9 @@
 							<reference ref="221134799"/>
 							<reference ref="38571198"/>
 							<reference ref="70501084"/>
-							<reference ref="253875535"/>
 							<reference ref="200757854"/>
 							<reference ref="843605562"/>
+							<reference ref="253875535"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -514,18 +514,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">PolygonLabelView</string>
-					<string key="superclassName">UIView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">polygon</string>
-						<string key="NS.object.0">PolygonShape</string>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">PolygonLabelView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

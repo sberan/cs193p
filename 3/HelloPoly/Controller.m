@@ -7,12 +7,9 @@
     [polygon setMinimumNumberOfSides:round([sideSelection minimumValue])];
     [polygon setMaximumNumberOfSides:round([sideSelection maximumValue])];
     [polygon setNumberOfSides:round([sideSelection value])];
-    
     [name setText:[polygon name]];
     [numSides setText:[NSString stringWithFormat:@"%i", [polygon numberOfSides]]];
-    
     [polygonView setNeedsDisplay];
-    
     [defaults setFloat:[polygon numberOfSides] forKey:@"numberOfSides"];
 }
 

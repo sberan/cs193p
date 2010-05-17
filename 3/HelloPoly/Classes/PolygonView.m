@@ -1,11 +1,8 @@
 #import "PolygonView.h"
 
-
 @implementation PolygonView
 
-
 -(void) drawRect:(CGRect)rect {
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextBeginPath (context);
     NSArray *points = [polygon pointsInRect:rect];
