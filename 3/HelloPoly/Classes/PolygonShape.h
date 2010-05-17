@@ -12,7 +12,7 @@
 @property int minimumNumberOfSides;
 @property int maximumNumberOfSides;
 @property (readonly) float angleInDegrees;
-@property (readonly, nonatomic) float angleInRadians;
+@property (readonly) float angleInRadians;
 @property (readonly) NSString* name;
 
 - (id)initWithNumberOfSides:(int)sides;
