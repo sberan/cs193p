@@ -16,6 +16,7 @@
 		B0539B461196567600E4D21E /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0539B451196567600E4D21E /* PolygonView.m */; };
 		B0E6886E11A0E2D200D4EC31 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E6886D11A0E2D200D4EC31 /* PolygonShape.m */; };
 		B0E6889011A0E48600D4EC31 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E6888F11A0E48600D4EC31 /* Controller.m */; };
+		E4066F4B11A5DF19001136B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4066F4A11A5DF19001136B0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B0E6886D11A0E2D200D4EC31 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
 		B0E6888E11A0E48600D4EC31 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		B0E6888F11A0E48600D4EC31 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		E4066F4A11A5DF19001136B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				E4066F4B11A5DF19001136B0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +113,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				E4066F4A11A5DF19001136B0 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

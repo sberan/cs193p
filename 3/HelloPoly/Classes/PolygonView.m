@@ -1,6 +1,16 @@
 #import "PolygonView.h"
 #import "math.h"
 
+
+//http://www.euclideanspace.com/maths/algebra/vectors/angleBetween/index.htm
+float angleFromPoints(CGPoint center, CGPoint a, CGPoint b) {
+	float ax = a.x - center.x;
+	float ay =  center.y - a.y;
+	float bx = b.x - center.x;
+	float by = center.y - b.y;
+	return atan2(ay, ax) - atan2(by, bx);	
+}
+
 @implementation PolygonView
 
 -(void) drawPath:(CGRect)rect {
@@ -51,23 +61,25 @@
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	if(touches.count == 1) {
-        UITouch *touch = [[touches objectEnumerator] nextObject];
-        touchStartPoint = [touch locationInView:self];
-    }
+	UITouch *touch = [[touches objectEnumerator] nextObject];
+	touchStartPoint = [touch locationInView:self];
 }
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    if(touches.count == 1) {
-        UITouch *touch = [[touches objectEnumerator] nextObject];
-        CGPoint point = [touch locationInView:self];
-		float ax = touchStartPoint.x - self.center.x;
-		float ay =  self.center.y - touchStartPoint.y;
-		float bx = point.x - self.center.x;
-		float by = self.center.y - point.y;
-		//http://www.euclideanspace.com/maths/algebra/vectors/angleBetween/index.htm
-		float result = atan2(ay, ax) - atan2(by, bx);		
-		self.transform = CGAffineTransformRotate(self.transform, result);
-    }
+	UITouch *touch = [[touches objectEnumerator] nextObject];
+	CGPoint point = [touch locationInView:self];
+	float angle = angleFromPoints(self.center, touchStartPoint, point);
+	self.transform = CGAffineTransformRotate(self.transform, angle);
 }
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	UITouch *touch = [[touches objectEnumerator] nextObject];
+	NSLog(@"%@", touch);
+	CABasicAnimation* spinAnimation = [CABasicAnimation
+									   animationWithKeyPath:@"transform.rotation"];
+	spinAnimation.duration = 4.4;
+	spinAnimation.toValue = [NSNumber numberWithFloat:5*2*M_PI];
+	[self.layer addAnimation:spinAnimation forKey:@"spinAnimation"];
+}
+
 @end
