@@ -10,4 +10,5 @@
     IBOutlet UIView *polygonView;
 }
 - (IBAction)updateNumberOfSides:(id)sender;
+- (void)updateView;
 @end

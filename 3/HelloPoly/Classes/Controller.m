@@ -3,7 +3,7 @@
 
 @implementation Controller
 
-- (void) awakeFromNib {
+- (void)awakeFromNib {
     float numberOfSides = [[NSUserDefaults standardUserDefaults] floatForKey:@"numberOfSides"];
     if (numberOfSides) {
         sideSelection.value = numberOfSides;
@@ -21,6 +21,9 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+	[self updateView];
+}
+- (void)updateView {
     [[NSUserDefaults standardUserDefaults] setFloat:[polygon numberOfSides] forKey:@"numberOfSides"];
     name.text = polygon.name;
     numSides.text = [NSString stringWithFormat:@"%i", [polygon numberOfSides]];

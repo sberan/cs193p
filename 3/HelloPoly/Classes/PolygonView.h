@@ -3,6 +3,8 @@
 
 @interface PolygonView : UIView {
     IBOutlet PolygonShape *polygon;
+	CGPoint touchStartPoint;
+	CGAffineTransform touchStartTransform;
 }
 
 @end
